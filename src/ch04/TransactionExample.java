@@ -18,12 +18,11 @@ public class TransactionExample {
 		// 구현체를 사용하기 위해서
 		// 클래스 Class <-- 최상위 Object 안에 있음
 		// 동적 바인딩 처리
-		
-		
+
 		try {
-			
+
 			// mysql 드라이버(구현클래스) 메모리에 로드
-			
+
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			// try catch resource 문법
 			try (Connection conn = DriverManager.getConnection(url, id, password)) {
@@ -47,7 +46,7 @@ public class TransactionExample {
 
 				// 수동 커밋 모드를 설정했다면 직접 commit() 실행해야
 				// 물리적인 저장 장치에 영구히 반영이 된다.
-				
+
 				if (true) {
 					conn.commit();
 				} else {
